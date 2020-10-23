@@ -1,0 +1,156 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masteradmin.master.cs" Inherits="BusTicket.masteradmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 540px;
+        }
+        .auto-style2 {
+            height: 138px;
+            text-align: center;
+            background-color: #66FFFF;
+            width: 851px;
+        }
+        
+.menu
+{
+	background-color:rgb(10,110,178);
+	width:100%;
+ 	margin: 0px 0px 10px;
+	padding:0px;
+	height:40px;
+	color:rgb(243,243,243);
+	border-radius: 5px 5px 5px 5px;
+}
+.navigation_first_item
+{
+	border-left:0px;
+	border-radius:5px 0 0 5px;
+}
+.naviitem_s
+{
+	float:left;
+	border-right:1px solid rgb(10,85,125);
+	border-left: 1px solid rgb(67,153,200);
+	height:40px;
+	background-color: rgb(14,79,114);
+}
+.menu ul{
+}
+.menu ul li{
+	float:left;
+	display:block;
+	list-style:none;
+	border-right:1px solid rgb(10,85,125);
+	border-left:1px solid rgb(67,153,200);
+}
+.menu ul li.navigation_first_item:hover
+{
+	border-radius:5px 0px 0px 5px;
+}
+.menu ul li a
+{
+	font-size:13px;
+	font-weight:bold;
+	line-height:40px;
+	padding: 8px 20px;
+	color:rgb(255,255,255);
+	text-decoration:none;
+}
+.menu ul li:hover{
+background-color:rgb(14,79,114);
+border-right:1px solid rgb(14,89,130);
+}
+.footer
+{
+    height:50px;
+    background-color:rgb(10,110,178);
+    color:rgb(255,255,255);
+        border-radius:5px 5px 5px 5px;
+
+}
+.footer h2
+{
+    padding:15px;
+    text-align:center;
+
+}
+#Button2
+{
+    border-radius:5px 5px 5px 5px;
+}
+
+        
+    </style>
+    <style>
+        #firstDiv{
+            width: 433px;
+            height: 452px;
+            background-color:red;
+            float:left;
+        }
+        #secondDiv{
+            
+            background-color:yellow;
+            float:left;
+        }
+        
+        .auto-style8 {
+            height: 1004px;
+        }
+        .div1{
+            height:900px;
+            width:100%;
+            background-color:#00ccff;
+        }
+        .auto-style9 {
+            height: 380px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="auto-style8">
+        
+        
+            <table border="1" class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="False" Font-Size="65pt" Text="ZERO SERVICE"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu">
+                       <ul>
+                        <li><a href="addbus.aspx" style="font-size: 15px;">Add Bus</a></li>
+                       <li><a href="removebus.aspx" style="font-size: 15px;">Remove Bus</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <li><a href="sendoffer.aspx" style="font-size: 15px;">Offer Service</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                           <asp:Label ID="welcomeLabel" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label> 
+                        &nbsp;<asp:Button ID="Button2" runat="server" Font-Bold="True" Font-Size="Medium" Text="Logout"  OnClick="Button2_Click"  CausesValidation="false"   />
+                    </ul>
+                   </td>
+                </tr>
+                
+                <tr>
+                    <td class="auto-style9" >
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                          
+                        </asp:ContentPlaceHolder>
+
+                    </td>
+                </tr>
+                </table>
+    </div>
+        
+    </form>
+</body>
+</html>
+

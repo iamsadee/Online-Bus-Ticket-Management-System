@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="BusTicket.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 138px;
+            text-align: center;
+            background-color: #66FFFF;
+            width: 851px;
+        }
+        .auto-style16 {
+            width: 100%;
+            height: 200px;
+        }
+        .auto-style17 {
+            height: 388px;
+            width: 851px;
+        }
+        .auto-style19 {
+            margin-left: 40px;
+            width: 421px;
+        }
+        .auto-style20 {
+            background-color: #FFCC00;
+        }
+        .menu
+{
+	background-color:rgb(10,110,178);
+	width:100%;
+ 	margin: 0px 0px 10px;
+	padding:0px;
+	height:40px;
+	color:rgb(243,243,243);
+	border-radius: 5px 5px 5px 5px;
+}
+.navigation_first_item
+{
+	border-left:0px;
+	border-radius:5px 0 0 5px;
+}
+.naviitem_s
+{
+	float:left;
+	border-right:1px solid rgb(10,85,125);
+	border-left: 1px solid rgb(67,153,200);
+	height:40px;
+	background-color: rgb(14,79,114);
+}
+.menu ul{
+}
+.menu ul li{
+	float:left;
+	display:block;
+	list-style:none;
+	border-right:1px solid rgb(10,85,125);
+	border-left:1px solid rgb(67,153,200);
+}
+.menu ul li.navigation_first_item:hover
+{
+	border-radius:5px 0px 0px 5px;
+}
+.menu ul li a
+{
+	font-size:13px;
+	font-weight:bold;
+	line-height:40px;
+	padding: 8px 20px;
+	color:rgb(255,255,255);
+	text-decoration:none;
+}
+.menu ul li:hover{
+background-color:rgb(14,79,114);
+border-right:1px solid rgb(14,89,130);
+}
+.clear
+{
+    clear:both;
+}
+.footer
+{
+    height:50px;
+    background-color:rgb(10,110,178);
+    color:rgb(255,255,255);
+        border-radius:5px 5px 5px 5px;
+
+}
+.footer h2
+{
+    padding:15px;
+    text-align:center;
+
+}
+
+    </style>
+    <style>
+        #firstDiv{
+            width: 433px;
+            height: 452px;
+            background-color:red;
+            float:left;
+        }
+        #secondDiv{
+            
+            background-color:yellow;
+            float:left;
+        }
+        
+        .auto-style21 {
+            height: 453px;
+            width: 1349px;
+        }
+        .auto-style22 {
+            height: 448px;
+        }
+        .auto-style23 {
+            width: 421px;
+        }
+        
+        .auto-style24 {
+            width: 907px;
+            height: 449px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        
+            <table border="1" class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="False" Font-Size="65pt" Text="ZERO SERVICE"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu">
+                        <ul>
+                        <li><a href="Home.aspx" style="font-size: 15px;">Home</a></li>
+                        <li><a href="signin.aspx" style="font-size: 15px;">Sign In</a></li>
+                        <li><a href="signup.aspx" style="font-size: 15px;">Sign Up</a></li>
+                        <li><a href="contactlog.aspx" style="font-size: 15px;">Contact Us</a></li>
+                         </ul>
+                            </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">
+                        <div id="ParentDiv" class="auto-style21">
+                            <div id="firstDiv" class="auto-style22"> 
+                            <table border="2" class="auto-style16">
+                                <tr>
+                                    <td class="auto-style23">
+                                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="White" Text="BUY TICKET"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Label ID="Label3" runat="server" ForeColor="White" Text="Leaving From :"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                                        <asp:DropDownList ID="DropDownList2" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource1" DataTextField="District" DataValueField="District">
+                                            <asp:ListItem>Select</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project3rdConnectionString %>" SelectCommand="SELECT [District] FROM [Dist]"></asp:SqlDataSource>
+                                        </strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style19">
+                                        &nbsp;<strong><asp:Label ID="Label4" runat="server" ForeColor="White" Text="Going To :"></asp:Label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:DropDownList ID="DropDownList3" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource1" DataTextField="District" DataValueField="District">
+                                            <asp:ListItem>Select</asp:ListItem>
+                                        </asp:DropDownList>
+                                        </strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Label ID="Label5" runat="server" ForeColor="White" Text="Departing On : "></asp:Label>
+&nbsp;<asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px">
+                                            <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
+                                            <DayStyle Width="14%" />
+                                            <NextPrevStyle Font-Size="8pt" ForeColor="White" />
+                                            <OtherMonthDayStyle ForeColor="#999999" />
+                                            <SelectedDayStyle BackColor="#CC3333" ForeColor="White" />
+                                            <SelectorStyle BackColor="#CCCCCC" Font-Bold="True" Font-Names="Verdana" Font-Size="8pt" ForeColor="#333333" Width="1%" />
+                                            <TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt" />
+                                            <TodayDayStyle BackColor="#CCCC99" />
+                                        </asp:Calendar>
+                                        &nbsp;&nbsp;
+                                        </strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Label ID="Label6" runat="server" ForeColor="White" Text="Coach Type :"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>&nbsp;<asp:DropDownList ID="DropDownList4" runat="server">
+                                            <asp:ListItem>Select</asp:ListItem>
+                                            <asp:ListItem>AC</asp:ListItem>
+                                            <asp:ListItem>Non-AC</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Button ID="Button1" runat="server" CssClass="auto-style20" ForeColor="Black" Text="Search" />
+                                        </strong></td>
+                                </tr>
+                                
+
+                            </table>
+                        </div>
+                           <div id="secondDiv" class="auto-style24"> 
+                               <asp:ScriptManager ID="ScriptManager1" runat="server">
+                               </asp:ScriptManager>
+                               <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                   <ContentTemplate> 
+                                <asp:Timer ID="Timer1" runat="server" Interval="3000" OnTick="Timer1_Tick1"></asp:Timer>
+                               <asp:Image ID="Image1" runat="server" Height="456px" Width="903px" />
+                                   </ContentTemplate>
+
+                               </asp:UpdatePanel>
+
+                               
+                            </div>
+                        
+                        </div>
+                  
+                    </td>
+                    
+                </tr>
+            </table>
+    </div>
+        
+        <div class="footer">
+            <h2>Copyright@ZeroService 2019 </h2>
+        </div>
+    </form>
+</body>
+</html>

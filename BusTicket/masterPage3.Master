@@ -1,0 +1,640 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage3.master.cs" Inherits="BusTicket.masterPage3" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 138px;
+            text-align: center;
+            background-color: #66FFFF;
+            width: 851px;
+        }
+        .auto-style7 {
+            height: 161px;
+            width: 851px;
+        }
+        .auto-style8 {
+            height: 204px;
+            width: 851px;
+        }
+        .auto-style11 {
+            height: 96px;
+            width: 851px;
+        }
+        .auto-style16 {
+            width: 100%;
+            height: 200px;
+        }
+        .auto-style17 {
+            height: 388px;
+            width: 851px;
+        }
+        .auto-style19 {
+            margin-left: 40px;
+            width: 421px;
+        }
+.menu
+{
+	background-color:rgb(10,110,178);
+	width:100%;
+ 	margin: 0px 0px 10px;
+	padding:0px;
+	height:40px;
+	color:rgb(243,243,243);
+	border-radius: 5px 5px 5px 5px;
+}
+.navigation_first_item
+{
+	border-left:0px;
+	border-radius:5px 0 0 5px;
+}
+.naviitem_s
+{
+	float:left;
+	border-right:1px solid rgb(10,85,125);
+	border-left: 1px solid rgb(67,153,200);
+	height:40px;
+	background-color: rgb(14,79,114);
+}
+.menu ul{
+}
+.menu ul li{
+	float:left;
+	display:block;
+	list-style:none;
+	border-right:1px solid rgb(10,85,125);
+	border-left:1px solid rgb(67,153,200);
+}
+.menu ul li.navigation_first_item:hover
+{
+	border-radius:5px 0px 0px 5px;
+}
+.menu ul li a
+{
+	font-size:13px;
+	font-weight:bold;
+	line-height:40px;
+	padding: 8px 20px;
+	color:rgb(255,255,255);
+	text-decoration:none;
+}
+.menu ul li:hover{
+background-color:rgb(14,79,114);
+border-right:1px solid rgb(14,89,130);
+}
+#Button2
+{
+    border-radius:5px 5px 5px 5px;
+}  
+.footer
+{
+    height:50px;
+    width:100%;
+    background-color:rgb(10,110,178);
+    color:rgb(255,255,255);
+        border-radius:5px 5px 5px 5px;
+
+}
+.footer h2
+{
+    padding:15px;
+    text-align:center;
+
+}  
+
+    </style>
+    <style>
+        #firstDiv{
+            width: 433px;
+            height: 452px;
+            background-color:red;
+            float:left;
+        }
+        #secondDiv{
+            
+            background-color:yellow;
+            float:left;
+        }
+        #fDiv{
+           
+            float:left;
+        }
+        #sDiv{
+            float:left;
+        }
+        
+        .auto-style21 {
+            height: 453px;
+            width: 1349px;
+        }
+        .auto-style22 {
+            height: 448px;
+        }
+        .auto-style23 {
+            width: 421px;
+        }
+        
+        .auto-style24 {
+            width: 907px;
+            height: 449px;
+        }
+        
+        .auto-style25 {
+            width: 1273px;
+            height: 1057px;
+        }
+        
+        .auto-style26 {
+            margin-left: 38px;
+        }
+        
+        .auto-style28 {
+            height: 554px;
+            width: 298px;
+        }
+        .auto-style29 {
+            height: 678px;
+            width: 866px;
+        }
+        .auto-style30 {
+            width: 562px;
+            height: 522px;
+            margin-left: 0px;
+        }
+        
+        .auto-style31 {
+            width: 59%;
+            height: 396px;
+        }
+        .auto-style32 {
+            text-align: center;
+        }
+        .auto-style20 {
+            background-color: #FFCC00;
+        }
+        .modalBackground
+    {
+        background-color: Black;
+        filter: alpha(opacity=40);
+        opacity: 0.4;
+    }
+    .modalPopup
+    {
+        background-color: #FFFFFF;
+        border: 3px solid #0DA9D0;
+    }
+        
+        .auto-style40 {
+            width: 305px;
+        }
+        
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        
+            <table border="1" class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="False" Font-Size="65pt" Text="ZERO SERVICE"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu">
+                       <ul>
+                       <li><a href="Afterlogin.aspx" style="font-size: 15px;">Home</a></li>
+                    
+                        <li><a href="buyPay.aspx" style="font-size: 15px;">Buy Pay Card</a></li>
+                       <li><a href="contact.aspx" style="font-size: 15px;">Contact Us</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="welcomeLabel" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                        &nbsp;<asp:Button ID="Button2" runat="server" Font-Bold="True" Font-Size="Medium" Text="Logout"  OnClick="Button2_Click"  />
+                       </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style17">
+                        <div id="ParentDiv" class="auto-style21">
+                            <div id="firstDiv" class="auto-style22"> 
+                            <table border="2" class="auto-style16">
+                                <tr>
+                                    <td class="auto-style23">
+                                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="White" Text="BUY TICKET"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Label ID="Label3" runat="server" ForeColor="White" Text="Leaving From :"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                                        <asp:DropDownList ID="leavingdrop" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource1" DataTextField="District" DataValueField="District">
+                                            <asp:ListItem>Select</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project3rdConnectionString %>" SelectCommand="SELECT [District] FROM [Dist]"></asp:SqlDataSource>
+                                        </strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style19">
+                                        &nbsp;<strong><asp:Label ID="Label4" runat="server" ForeColor="White" Text="Going To :"></asp:Label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:DropDownList ID="goingdrop" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource1" DataTextField="District" DataValueField="District">
+                                            <asp:ListItem>Select</asp:ListItem>
+                                        </asp:DropDownList>
+                                        </strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Label ID="Label5" runat="server" ForeColor="White" Text="Departing On : "></asp:Label>
+&nbsp;<asp:Calendar ID="date" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px">
+                                            <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
+                                            <DayStyle Width="14%" />
+                                            <NextPrevStyle Font-Size="8pt" ForeColor="White" />
+                                            <OtherMonthDayStyle ForeColor="#999999" />
+                                            <SelectedDayStyle BackColor="#CC3333" ForeColor="White" />
+                                            <SelectorStyle BackColor="#CCCCCC" Font-Bold="True" Font-Names="Verdana" Font-Size="8pt" ForeColor="#333333" Width="1%" />
+                                            <TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt" />
+                                            <TodayDayStyle BackColor="#CCCC99" />
+                                        </asp:Calendar>
+                                        &nbsp;&nbsp;
+                                        </strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Label ID="Label6" runat="server" ForeColor="White" Text="Coach Type :"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>&nbsp;<asp:DropDownList ID="coachdrop" runat="server">
+                                            <asp:ListItem>Select</asp:ListItem>
+                                            <asp:ListItem>AC</asp:ListItem>
+                                            <asp:ListItem>Non-AC</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style23"><strong>
+                                        <asp:Button ID="src_btn" runat="server" CssClass="auto-style20" ForeColor="Black" Text="Search" OnClick="src_btn_Click"   />
+                                        </strong></td>
+                                </tr>
+                                
+
+                            </table>
+                        </div>
+                           <div id="secondDiv" class="auto-style24"> 
+                               <asp:ScriptManager ID="ScriptManager1" runat="server">
+                               </asp:ScriptManager>
+                               <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                   <ContentTemplate> 
+                                <asp:Timer ID="Timer1" runat="server" Interval="3000" OnTick="Timer1_Tick1"></asp:Timer>
+                               <asp:Image ID="Image1" runat="server" Height="448px" Width="904px" />
+                                   </ContentTemplate>
+
+                               </asp:UpdatePanel>
+
+                               
+                            </div>
+                        
+                        </div>
+                  
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    <td class="auto-style7">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                            <div class="auto-style25"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Showing The Available Bus"></asp:Label>
+                                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Always" ChildrenAsTriggers="true" >
+                                 
+                                    <ContentTemplate>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Label ID="Label11" runat="server" Font-Bold="True" Font-Size="Large" Text="Filter :"></asp:Label>
+&nbsp;  
+                                
+                                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Height="37px" AutoPostBack="True">
+                                    <asp:ListItem>Select</asp:ListItem>
+                                    <asp:ListItem>Price High To Low</asp:ListItem>
+                                    <asp:ListItem>Price Low To High</asp:ListItem>
+                                </asp:DropDownList>
+                                     
+                                     
+                                
+                                &nbsp;&nbsp;
+                                     
+                                
+                                <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <br />
+                                        <asp:Label ID="Label16" runat="server"></asp:Label>
+                                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:GridView ID="GridView1" runat="server" CssClass="auto-style26" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" Font-Bold="True" Font-Size="Large" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                                    <AlternatingRowStyle BackColor="#DCDCDC" />
+                                    <Columns>
+                                        <asp:CommandField SelectText="View Seat" ShowSelectButton="True" />
+                                    </Columns>
+                                    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                    <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                                    <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                    <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                    <SortedDescendingHeaderStyle BackColor="#000065" />
+                                </asp:GridView>
+                                     </ContentTemplate>
+                                  </asp:UpdatePanel>
+                                    
+                                <br />
+                                <br />
+                                <asp:LinkButton ID="LinkButton1" runat="server"></asp:LinkButton>
+                                <br />
+                                <br />
+                                <asp:Panel ID="Panel1" runat="server"  Width="861px" CssClass="modalPopup" Height="682px" >
+                                <div id="ParentDiv" class="auto-style29">
+                                    <asp:UpdatePanel ID="updatePanel3"  runat="server">
+                                    <Triggers>
+                                     <asp:PostBackTrigger ControlID="payNowButton" />
+                                 </Triggers>
+                                        <ContentTemplate>                                  
+                                    <asp:Button ID="Button44" runat="server" Text="Button" />
+                                    <asp:Button ID="Button45" runat="server" Text="Button" />
+                                    <br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="Label8" runat="server" Text="Book Ticket Info" BackColor="#FFFF99" Font-Bold="True" Font-Size="XX-Large"></asp:Label>
+                                    <br />
+                                    <br />
+                                    
+                                    <div id="fDiv" class="auto-style28"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <br />
+                                        
+
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Label ID="Label9" runat="server" BackColor="#6699FF" Font-Bold="True" Font-Size="X-Large" Text="Seat View"></asp:Label>
+                                        <br />
+                                        <table class="auto-style31">
+                                            <tr>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="A1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="A1" OnClick="A1_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="A2" runat="server" Font-Bold="True" Font-Size="X-Large" Text="A2" OnClick="A2_Click" />
+                                                </td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="A3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="A3" OnClick="A3_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="A4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="A4" OnClick="A4_Click" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="B1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="B1" OnClick="B1_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="B2" runat="server" Font-Bold="True" Font-Size="X-Large" Text="B2" OnClick="B2_Click" />
+                                                </td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="B3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="B3" OnClick="B3_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="B4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="B4" OnClick="B4_Click" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="C1" runat="server" Font-Bold="True" Font-Size="X-Large" Font-Underline="False" Text="C1" OnClick="C1_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="C2" runat="server" Font-Bold="True" Font-Size="X-Large" Text="C2" OnClick="C2_Click" />
+                                                </td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="C3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="C3" OnClick="C3_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="C4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="C4" OnClick="C4_Click" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="D1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="D1" OnClick="D1_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="D2" runat="server" Font-Bold="True" Font-Size="X-Large" Text="D2" OnClick="D2_Click" />
+                                                </td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="D3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="D3" OnClick="D3_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="D4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="D4" OnClick="D4_Click" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="E1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="E1" OnClick="E1_Click" />
+                                                </td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="E2" runat="server" Font-Bold="True" Font-Size="X-Large" Text="E2" OnClick="E2_Click" />
+                                                </td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32">
+                                                    <asp:Button ID="E3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="E3" OnClick="E3_Click" />
+                                                </td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="E4" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="E4" OnClick="E4_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="F1" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="F1" OnClick="F1_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="F2" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="F2" OnClick="F2_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="F3" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="F3" OnClick="F3_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="F4" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="F4" OnClick="F4_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="G1" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="G1" OnClick="G1_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="G2" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="G2" OnClick="G2_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="G3" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="G3" OnClick="G3_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="G4" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="G4" OnClick="G4_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="H1" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="H1" OnClick="H1_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="H2" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="H2" OnClick="H2_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="H3" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="H3" OnClick="H3_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="H4" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="H4" OnClick="H4_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="I1" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="I1" OnClick="I1_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="I2" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="I2" OnClick="I2_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="I3" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="I3" OnClick="I3_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="I4" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="I4" OnClick="I4_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="J1" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="J1" OnClick="J1_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="J2" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="J2" OnClick="J2_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style40">&nbsp;</td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="J3" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="J3" OnClick="J3_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                                <td class="auto-style32"><strong>
+                                                    <asp:Button ID="J4" runat="server" CssClass="auto-style33" Font-Size="X-Large" Text="J4" OnClick="J4_Click" style="font-weight: bold" />
+                                                    </strong></td>
+                                            </tr>
+                                        </table>
+                                        
+
+                                    </div>
+                                      
+                                        
+                                    <div id="sDiv" class="auto-style30">
+                                      
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label10" runat="server" Font-Bold="True" Font-Size="Large" Text="Name : "></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                        <asp:TextBox ID="naamText" runat="server" Font-Bold="True" Font-Size="Large" Height="24px" Width="202px" ReadOnly="True"></asp:TextBox>
+                                        &nbsp;&nbsp;
+                                         <br />
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:Label ID="Label12" runat="server" Font-Bold="True" Font-Size="Large" Text="UserName : "></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:TextBox ID="userNameText" runat="server" Font-Bold="True" Font-Size="Large" Height="23px" Width="198px" ReadOnly="True"></asp:TextBox>
+                                         <br />
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                         <asp:Label ID="contactlabel" runat="server" Font-Bold="True" Font-Size="Medium" Text="Contact Number : "></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:TextBox ID="mobileText" runat="server" Font-Bold="True" Font-Size="Large" Height="20px" Width="196px" ReadOnly="True"></asp:TextBox>
+                                         <br />
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:Label ID="Label13" runat="server" Font-Bold="True" Font-Size="Large" Text="Seat Fare : "></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                         <asp:TextBox ID="fareText" runat="server" Font-Bold="True" Font-Size="Large" Height="16px" Width="201px" ReadOnly="True"></asp:TextBox>
+                                         <br />
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:Label ID="Label14" runat="server" Font-Bold="True" Font-Size="Large" Text="Seat No : "></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                         <asp:TextBox ID="seatNoText" runat="server" Font-Bold="True" Font-Size="Large" Height="26px" OnTextChanged="seatNoText_TextChanged" Width="203px" ReadOnly="True"></asp:TextBox>
+                                         <br />
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<asp:Label ID="Label15" runat="server" Font-Bold="True" Font-Size="Large" Text="Ticket No :"></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:TextBox ID="ticketnumText" runat="server" Font-Bold="True" Font-Size="Large" Height="27px" Width="204px" ReadOnly="True"></asp:TextBox>
+                                         <br />
+                                         <br />
+                                         &nbsp;
+                                         <asp:Label ID="bkashLabel" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         
+                                         <asp:Label ID="Label17" runat="server" Font-Bold="True" Font-Size="Large" Text="TRX ID :"></asp:Label>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:TextBox ID="trxidText" runat="server" Font-Bold="True" Font-Size="Large" Height="19px" Width="200px"></asp:TextBox>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <br />
+                                         <br />
+                                         <br />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="btnCerrarPopUp" runat="server" OnCommand="ocultarModalCommand"  Text="Cancel" Font-Bold="True" Font-Size="Large" Height="42px" />
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                         <asp:Button ID="payNowButton" runat="server" Font-Bold="True" Font-Size="Large" Height="42px" OnClick="payNowButton_Click" Text="PAY NOW" Width="107px" />
+                                         
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    
+                                    <br />
+&nbsp;
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                                                            
+                                           </div>
+                                        
+                                </div>
+                                             </ContentTemplate>
+                                     </asp:UpdatePanel>
+                                    
+                                </asp:Panel>
+                                <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtender1" runat="server" TargetControlID="LinkButton1" PopupControlID="Panel1"  BackgroundCssClass="modalBackground"  CancelControlID="btnCerrarPopUp" ></ajaxToolkit:ModalPopupExtender>
+                            
+                                    </div>
+
+                             </asp:ContentPlaceHolder>
+
+                    </td>
+                </tr>
+                
+                
+                </table>
+        
+       
+    </div>
+         <div class="footer">
+            <h2>Copyright@ZeroService 2019 </h2>
+        </div>
+    </form>
+</body>
+</html>

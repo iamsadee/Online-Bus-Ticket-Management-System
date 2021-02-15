@@ -19,7 +19,7 @@
 * Forget password option for user through email
 
 ### Use-case diagram
-![Use-case diagram](images/usecase.jpg)
+![Use-case diagram](images/usecase.JPG)
 
 ### Limitations
 * User cannot download PDF of ticket second time
@@ -29,46 +29,46 @@
 ### Screenshots
 
 #### Homepage
-![Homepage](images/home.jpg)
+![Homepage](images/home.JPG)
 
 #### SignUp Page
-![SignUp Page](images/signup.jpg)
+![SignUp Page](images/signup.JPG)
 
 #### SignIn Page
-![SignIn Page](images/signin.jpg)
+![SignIn Page](images/signin.JPG)
 
 #### AfterLogin HomePage
-![AfterLogin HomePage](images/afterLogin.jpg)
+![AfterLogin HomePage](images/afterLogin.JPG)
 
 #### Bus Search List
-![Bus Search List](images/selectbus.jpg)
+![Bus Search List](images/selectbus.JPG)
 
 #### Bus List & Filter by Price
-![Bus List & Filter by Price](images/seachlist&filter.jpg)
+![Bus List & Filter by Price](images/seachlist&filter.JPG)
 
 #### Select Bus & Pay
-![Select Bus & Pay](images/seatdetail.jpg)
+![Select Bus & Pay](images/seatdetail.JPG)
 
 #### PDF of Ticket
-![PDF of Ticket](images/PDFticket.jpg)
+![PDF of Ticket](images/PDFticket.JPG)
 
 #### Buy Pay Card from Offer
-![Buy Pay Card from Offer](images/buyPaycard.jpg)
+![Buy Pay Card from Offer](images/buyPaycard.JPG)
 
 #### Login as Admin & Add Bus
-![Login as Admin & Add Bus](images/loginasAdmin.jpg)
+![Login as Admin & Add Bus](images/loginasAdmin.JPG)
 
 #### Remove Bus
-![Remove Bus](images/removeBus.jpg)
+![Remove Bus](images/removeBus.JPG)
 
 #### Offer Send through Email All User
-![Offer Send through Email All User](images/offerSend.jpg)
+![Offer Send through Email All User](images/offerSend.JPG)
 
 #### Forget Password
-![Forget Password](images/forgetpass.jpg)
+![Forget Password](images/forgetpass.JPG)
 
 #### Email after Request Forget Email
-![Email after Request Forget Email](images/forgetpassEMail.jpg)
+![Email after Request Forget Email](images/forgetpassEMail.JPG)
 
 #### Contact Us
-![Contact Us](images/contactUs.jpg)
+![Contact Us](images/contactUs.JPG)
